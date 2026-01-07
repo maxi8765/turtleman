@@ -43,7 +43,7 @@
     header {
       background: var(--paper-dark);
       border: 3px solid var(--ink);
-      padding: 14px 18px;
+      padding: 16px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -54,11 +54,11 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
     }
 
     .logo-img {
-      height: 120px;          /* bigger logo */
+      height: 200px;
       width: auto;
       display: block;
       image-rendering: crisp-edges;
@@ -96,63 +96,63 @@
       background: var(--paper);
       border: 3px solid var(--ink);
       box-shadow: 0 0 0 3px #f7e7bd;
-      padding: 24px 20px;
-    }
-
-    /* Box 1: title / hero */
-
-    .hero {
+      padding: 28px 24px;
+      min-height: 260px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      justify-content: flex-start;
+    }
+
+    .hero {
+      gap: 16px;
     }
 
     .hero-title {
-      font-size: clamp(30px, 5vw, 40px);
-      line-height: 1.05;
+      font-size: clamp(34px, 6vw, 48px);
+      line-height: 1.1;
       text-transform: uppercase;
       color: var(--headline);
     }
 
     .hero-tagline {
-      font-size: 16px;
+      font-size: 18px;
+      line-height: 1.6;
       color: var(--ink-soft);
-      max-width: 40rem;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
     .hero-meta {
-      font-size: 13px;
+      font-size: 16px;
       color: var(--ink-soft);
       text-transform: uppercase;
       letter-spacing: 0.12em;
+      margin-top: auto;
     }
 
-    /* Box 2: about */
-
     .section-title {
-      font-size: 24px;
+      font-size: 30px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--headline);
-      margin-bottom: 10px;
+      margin-bottom: 16px;
     }
 
     .about-text {
-      font-size: 16px;
-      color: var(--ink-soft);
-      max-width: 46rem;
+      font-size: 18px;
       line-height: 1.6;
+      color: var(--ink-soft);
+      text-align: justify;
+      text-justify: inter-word;
     }
-
-    /* Box 3: free comics */
 
     .comics-header-line {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 10px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .comics-subtitle {
@@ -160,12 +160,14 @@
       color: var(--ink-soft);
       text-transform: uppercase;
       letter-spacing: 0.12em;
+      align-self: center;
     }
 
     .comic-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 14px;
+      margin-top: 4px;
     }
 
     .comic-card {
@@ -175,6 +177,7 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      height: 100%;
     }
 
     .comic-tag {
@@ -192,8 +195,12 @@
     }
 
     .comic-meta {
-      font-size: 15px;
+      font-size: 16px;
+      line-height: 1.6;
       color: var(--ink-soft);
+      flex: 1;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
     .comic-footer {
@@ -238,12 +245,14 @@
       letter-spacing: 0.12em;
     }
 
-    /* Mobile adjustments */
-
     @media (max-width: 768px) {
       header {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .logo-img {
+        height: 150px;
       }
 
       .header-note {
@@ -251,29 +260,23 @@
         max-width: none;
       }
 
-      .logo-img {
-        height: 90px;
-      }
-
       section {
-        padding: 18px 14px;
+        padding: 20px 16px;
+        min-height: 220px;
       }
 
       .hero-title {
         font-size: 28px;
       }
 
+      .section-title {
+        font-size: 26px;
+      }
+
+      .hero-tagline,
       .about-text,
-      .hero-tagline {
-        font-size: 15px;
-      }
-
-      .comic-title {
-        font-size: 16px;
-      }
-
       .comic-meta {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   </style>
@@ -294,7 +297,6 @@
     </header>
 
     <main>
-      <!-- Box 1: Title box -->
       <section class="hero" id="title">
         <div class="hero-title">Free Turtleman comics.</div>
         <p class="hero-tagline">
@@ -305,7 +307,6 @@
         </div>
       </section>
 
-      <!-- Box 2: About box -->
       <section id="about">
         <div class="section-title">About Turtleman</div>
         <p class="about-text">
@@ -313,7 +314,6 @@
         </p>
       </section>
 
-      <!-- Box 3: Free Turtleman comics box -->
       <section id="comics">
         <div class="comics-header-line">
           <div class="section-title">Free Turtleman comics</div>
