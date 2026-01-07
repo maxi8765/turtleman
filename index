@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Turtleman Comics • Free Downloads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Read and download free Turtleman comics as PDF.">
+  <style>
+    :root {
+      font-family: "Trebuchet MS", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --paper: #f0dcaf;
+      --paper-dark: #e1c38a;
+      --ink: #1f1b16;
+      --ink-soft: #4b4337;
+      --headline: #b94524;
+      --panel-green: #23633b;
+      --panel-green-light: #3f8b56;
+      --border: #c7a974;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top, #f7e7bd 0, #e4c88d 45%, #d2b276 80%) fixed;
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 12px 40px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    header {
+      background: var(--paper-dark);
+      border: 3px solid var(--ink);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      box-shadow: 0 0 0 3px #f7e7bd;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 70px;
+      width: auto;
+      display: block;
+      image-rendering: crisp-edges;
+    }
+
+    .brand-text-main {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--headline);
+    }
+
+    .brand-text-sub {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--ink-soft);
+    }
+
+    .header-note {
+      font-size: 12px;
+      color: var(--ink-soft);
+      text-align: right;
+      max-width: 180px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    section {
+      background: var(--paper);
+      border: 3px solid var(--ink);
+      box-shadow: 0 0 0 3px #f7e7bd;
+      padding: 16px 14px 18px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .header-note {
+        text-align: left;
+      }
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero-title {
+      font-size: clamp(26px, 4vw, 32px);
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: var(--headline);
+      margin-bottom: 10px;
+    }
+
+    .hero-tagline {
+      font-size: 14px;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+      max-width: 40rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: 0;
+      border: 2px solid var(--ink);
+      background: var(--panel-green);
+      color: #fdf5da;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+    }
+
+    .btn span {
+      margin-left: 6px;
+    }
+
+    .btn:hover {
+      background: var(--panel-green-light);
+    }
+
+    .btn-secondary {
+      background: #fdf5da;
+      color: var(--ink);
+    }
+
+    .btn-secondary:hover {
+      background: #f7e7bd;
+    }
+
+    .hero-meta {
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .hero-card {
+      background: #fdf5da;
+      border: 2px solid var(--ink);
+      display: flex;
+      flex-direction: column;
+      padding: 10px 10px 12px;
+    }
+
+    .hero-card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--ink-soft);
+      margin-bottom: 4px;
+    }
+
+    .hero-card-title {
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--panel-green);
+      margin-bottom: 6px;
+    }
+
+    .hero-card-body {
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin-bottom: 8px;
+    }
+
+    .hero-card-meta {
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--headline);
+    }
+
+    .section-subtitle {
+      font-size: 12px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .comic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .comic-card {
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 10px 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .comic-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--ink-soft);
+    }
+
+    .comic-title {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--panel-green);
+    }
+
+    .comic-meta {
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    .comic-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+      gap: 8px;
+    }
+
+    .comic-size {
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .comic-download {
+      font-size: 11px;
+      border-radius: 0;
+      padding: 6px 10px;
+      border: 2px solid var(--ink);
+      background: var(--panel-green);
+      text-decoration: none;
+      color: #fdf5da;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      white-space: nowrap;
+    }
+
+    .comic-download:hover {
+      background: var(--panel-green-light);
+    }
+
+    .about-text {
+      font-size: 13px;
+      color: var(--ink-soft);
+      max-width: 46rem;
+      line-height: 1.5;
+    }
+
+    .issue-picker {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .issue-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-soft);
+    }
+
+    .issue-select {
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 6px 8px;
+      font-size: 13px;
+      min-width: 180px;
+    }
+
+    .issue-download-btn {
+      border: 2px solid var(--ink);
+      background: var(--panel-green);
+      color: #fdf5da;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    .issue-download-btn:hover {
+      background: var(--panel-green-light);
+    }
+
+    footer {
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-align: center;
+      padding: 0 0 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <img src="turtleman%20logo.png" alt="Turtleman logo" class="logo-img">
+        <div>
+          <div class="brand-text-main">Turtleman</div>
+          <div class="brand-text-sub">Very Slow Adventures</div>
+        </div>
+      </div>
+      <div class="header-note">
+        Free PDF comic. 60s/70s cheap superhero energy.
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="hero-title">Free Turtleman comics.</div>
+          <p class="hero-tagline">
+            Download full issues in PDF, laid out like old cheap superhero books on yellowing paper. No sign-ups, no tracking, just Turtleman wandering the world.
+          </p>
+          <div class="hero-actions">
+            <a href="#downloads" class="btn">
+              Download comics
+              <span aria-hidden="true">▼</span>
+            </a>
+            <a href="#about" class="btn btn-secondary">
+              About Turtleman
+            </a>
+          </div>
+          <div class="hero-meta">
+            A4 pages · works on tablets · printable
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-label">Featured issue</div>
+          <div class="hero-card-title">Very slow adventures in India</div>
+          <div class="hero-card-body">
+            Turtleman at trade shows, trains, hotel bars and tech summits. Long days, cheap jokes and quantum marketing.
+          </div>
+          <div class="hero-card-meta">
+            PDF · ~20 pages · Issue 4
+          </div>
+        </div>
+      </section>
+
+      <section id="downloads">
+        <div class="section-header">
+          <div class="section-title">Comic downloads</div>
+          <div class="section-subtitle">Click a book to get the PDF</div>
+        </div>
+
+        <div class="comic-grid">
+          <article class="comic-card">
+            <div class="comic-tag">Issue 1</div>
+            <div class="comic-title">Turtleman in Bali</div>
+            <div class="comic-meta">
+              Scooters, gluten free chaos, nachos regret and beach logistics. The original trip.
+            </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4 · ~20 pages</div>
+              <a href="Issue_1.pdf" class="comic-download">
+                Download
+              </a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 2</div>
+            <div class="comic-title">Gili edition</div>
+            <div class="comic-meta">
+              Boats, snorkels, altitude sickness at four metres above sea level and too many cats.
+            </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4 · ~20 pages</div>
+              <a href="Issue_2.pdf" class="comic-download">
+                Download
+              </a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 3</div>
+            <div class="comic-title">Indo miscellany</div>
+            <div class="comic-meta">
+              Packing lists, strange offers, massage signage and other field notes from the road.
+            </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4 · ~24 pages</div>
+              <a href="Issue_3.pdf" class="comic-download">
+                Download
+              </a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 4</div>
+            <div class="comic-title">Very slow adventures in India</div>
+            <div class="comic-meta">
+              Trade shows, tech summits, buses, beer and quantum sales patter. The Bangalore run.
+            </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4 · 20 pages</div>
+              <a href="Issue_4.pdf" class="comic-download">
+                Download
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="issue-picker">
+        <div class="section-header">
+          <div class="section-title">Quick issue selector</div>
+          <div class="section-subtitle">Choose an issue number</div>
+        </div>
+        <div class="issue-picker">
+          <span class="issue-label">Select issue:</span>
+          <select id="issueSelect" class="issue-select">
+            <option value="Issue_1.pdf">Issue 1</option>
+            <option value="Issue_2.pdf">Issue 2</option>
+            <option value="Issue_3.pdf">Issue 3</option>
+            <option value="Issue_4.pdf">Issue 4</option>
+          </select>
+          <button type="button" class="issue-download-btn" onclick="downloadIssue()">Download selected</button>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-header">
+          <div class="section-title">About Turtleman</div>
+        </div>
+        <p class="about-text">
+          Turtleman is a free comic inspired by the great cheap superhero comics of the 60s and 70s (like the Phantom). Turtleman is an everyday man and his family that like travelling and seeing new places. Developed as a travelling aid, Turtleman leans into "AI Slop"- making it a feature, not a bug.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    Turtleman Comics · Free to read, free to share (non-commercial)
+  </footer>
+
+  <script>
+    function downloadIssue() {
+      var select = document.getElementById("issueSelect");
+      var file = select.value;          // "Issue_1.pdf" etc
+      window.location.href = file;      // adjust path if PDFs live in a subfolder
+    }
+  </script>
+</body>
+</html>
