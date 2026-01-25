@@ -24,9 +24,7 @@
       --panel-green-light: #3f8b56;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -110,9 +108,7 @@
       justify-content: flex-start;
     }
 
-    .hero {
-      gap: 16px;
-    }
+    .hero { gap: 16px; }
 
     .hero-title {
       font-size: clamp(34px, 6vw, 48px);
@@ -146,7 +142,9 @@
       margin-bottom: 16px;
     }
 
-    .about-text {
+    .about-text,
+    .endorse-text,
+    .resource-text {
       font-size: 18px;
       line-height: 1.6;
       color: var(--ink-soft);
@@ -225,7 +223,8 @@
       letter-spacing: 0.1em;
     }
 
-    .comic-download {
+    .comic-download,
+    .resource-button {
       font-size: 12px;
       border-radius: 0;
       padding: 8px 12px;
@@ -237,10 +236,71 @@
       text-transform: uppercase;
       letter-spacing: 0.12em;
       white-space: nowrap;
+      display: inline-block;
     }
 
-    .comic-download:hover {
+    .comic-download:hover,
+    .resource-button:hover {
       background: var(--panel-green-light);
+    }
+
+    .endorsement-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .endorsement-figure {
+      margin: 0;
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 10px;
+    }
+
+    .endorsement-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .endorsement-caption {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.5;
+    }
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .resource-card {
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 14px 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .resource-title {
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--panel-green);
+    }
+
+    audio {
+      width: 100%;
+      border: 2px solid var(--ink);
+      background: #fdf5da;
     }
 
     footer {
@@ -258,9 +318,7 @@
         align-items: flex-start;
       }
 
-      .logo-img {
-        height: 150px;
-      }
+      .logo-img { height: 150px; }
 
       .header-note {
         text-align: left;
@@ -272,19 +330,19 @@
         min-height: 220px;
       }
 
-      .hero-title {
-        font-size: 28px;
-      }
+      .hero-title { font-size: 28px; }
 
-      .section-title {
-        font-size: 26px;
-      }
+      .section-title { font-size: 26px; }
 
       .hero-tagline,
       .about-text,
-      .comic-meta {
-        font-size: 16px;
-      }
+      .endorse-text,
+      .resource-text,
+      .comic-meta { font-size: 16px; }
+
+      .endorsement-wrap { grid-template-columns: 1fr; }
+
+      .resources-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -307,7 +365,7 @@
       <section class="hero" id="title">
         <div class="hero-title">Free Turtleman comics.</div>
         <p class="hero-tagline">
-         Old-school superhero on yellowing paper, generated with just enough AI slop to be honest about it. Download the full issues as PDFs and read them wherever you like.
+          Old-school superhero on yellowing paper, generated with just enough AI slop to be honest about it. Download the full issues as PDFs and read them wherever you like.
         </p>
         <div class="hero-meta">
           A4 pages · tablet friendly · printable
@@ -317,8 +375,53 @@
       <section id="about">
         <div class="section-title">About Turtleman</div>
         <p class="about-text">
-          Turtleman is a free comic inspired by the great cheap superhero comics of the 60s and 70s (especially the Phantom). Turtleman is pointless and possibly the most useless superhero ever. Developed as a travelling aid, Turtleman leans into "AI Slop"- making it a feature, not a bug.
+          Turtleman is a free comic inspired by the great cheap superhero comics of the 60s and 70s (especially the Phantom). Turtleman is pointless and possibly the most useless superhero ever. Developed as a travelling aid, Turtleman leans into "AI Slop" making it a feature, not a bug.
         </p>
+      </section>
+
+      <section id="endorsement">
+        <div class="section-title">Endorsement</div>
+
+        <div class="endorsement-wrap">
+          <div>
+            <p class="endorse-text">
+              As endorsed by Donald Trump, Elon Musk™, the Dalai Lama, and Russell Crowe.
+            </p>
+
+            <div class="resources-grid">
+              <div class="resource-card">
+                <div class="resource-title">Turtleman explainer (PDF)</div>
+                <p class="resource-text">
+                  A short retrospective and brand manifesto, in case anyone needs a formal document to justify reading a comic about nothing.
+                </p>
+                <a class="resource-button" href="Turtleman_Global_Operations_Retrospective-compressed.pdf">Open / Download</a>
+              </div>
+
+              <div class="resource-card">
+                <div class="resource-title">Podcast explainer (Audio)</div>
+                <p class="resource-text">
+                  Turtleman satirises corporate life with AI slop, which is redundant because corporate life already does that.
+                </p>
+                <audio controls preload="none">
+                  <source src="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a" type="audio/mp4">
+                  Your browser does not support the audio element.
+                </audio>
+                <a class="resource-button" href="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a">Download Audio</a>
+              </div>
+            </div>
+          </div>
+
+          <figure class="endorsement-figure">
+            <img
+              src="ChatGPT%20Image%20Jan%2025,%202026,%2012_44_25%20PM.png"
+              alt="Turtleman endorsement image (satire)"
+              loading="lazy"
+            >
+            <figcaption class="endorsement-caption">
+              Endorsement image: satire. People on the internet are not, generally, providing sworn statements.
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section id="comics">
@@ -376,10 +479,10 @@
             </div>
           </article>
 
-            <article class="comic-card">
-              <div class="comic-tag">Issue 5</div>
-              <div class="comic-title">Turtleman in Indo</div>
-              <div class="comic-meta">
+          <article class="comic-card">
+            <div class="comic-tag">Issue 5</div>
+            <div class="comic-title">Turtleman in Indo</div>
+            <div class="comic-meta">
               Issue 5 is Turtleman in Indonesia. A family holiday through Bali and Lombok: scooters and ferries, airport runs, villas full of cats, gluten-free optimism, beach bars, minor illness, and the usual slow heroics in a place that does not care about capes.
             </div>
             <div class="comic-footer">
@@ -388,36 +491,37 @@
             </div>
           </article>
 
-            <article class="comic-card">
-              <div class="comic-tag">Issue 6</div>
-              <div class="comic-title">Turtleman in South America</div>
-              <div class="comic-meta">
+          <article class="comic-card">
+            <div class="comic-tag">Issue 6</div>
+            <div class="comic-title">Turtleman in South America</div>
+            <div class="comic-meta">
               Issue 6 is Turtleman in South America. A family run through Buenos Aires, Mendoza and Manzano: long-haul flights, airport lounges, altitude mishaps, horses, river dinners, stray logistics, light confusion across borders, and plenty of beer.
-            </div>    
+            </div>
             <div class="comic-footer">
               <div class="comic-size">PDF · A4</div>
               <a href="Issue_6.pdf" class="comic-download">Download</a>
             </div>
-          </article>  
+          </article>
 
           <article class="comic-card">
-              <div class="comic-tag">Issue 7</div>
-              <div class="comic-title">Turtleman in Sydney</div>
-              <div class="comic-meta">
-             Turtleman’s Sydney adventure is a caffeine-fuelled loop of wrong trams, serious meetings, old friends, too many coffees, too many beers, and just enough business to justify it all.
+            <div class="comic-tag">Issue 7</div>
+            <div class="comic-title">Turtleman in Sydney</div>
+            <div class="comic-meta">
+              Turtleman’s Sydney adventure is a caffeine-fuelled loop of wrong trams, serious meetings, old friends, too many coffees, too many beers, and just enough business to justify it all.
+            </div>
             <div class="comic-footer">
               <div class="comic-size">PDF · A4</div>
               <a href="Issue_7.pdf" class="comic-download">Download</a>
             </div>
-          </article>  
-          
+          </article>
+
         </div>
       </section>
     </main>
   </div>
 
   <footer>
-    © MXX1 Holdings Pty Ltd 2025
+    © MXX1 Holdings Pty Ltd 2026
   </footer>
 </body>
 </html>
