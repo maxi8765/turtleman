@@ -244,57 +244,65 @@
       background: var(--panel-green-light);
     }
 
-    .endorsement-wrap {
+    .endorsement-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 16px;
-      align-items: start;
-    }
-
-    .endorsement-figure {
-      margin: 0;
-      border: 2px solid var(--ink);
-      background: #fdf5da;
-      padding: 10px;
-    }
-
-    .endorsement-figure img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .endorsement-caption {
-      margin-top: 10px;
-      font-size: 12px;
-      color: var(--ink-soft);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      line-height: 1.5;
-    }
-
-    .resources-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
-      margin-top: 10px;
+      margin-top: 14px;
+      align-items: stretch;
     }
 
-    .resource-card {
+    .endorse-card {
       border: 2px solid var(--ink);
       background: #fdf5da;
       padding: 14px 12px 16px;
       display: flex;
       flex-direction: column;
       gap: 10px;
+      height: 100%;
     }
 
-    .resource-title {
+    .endorse-card-title {
       font-size: 16px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       color: var(--panel-green);
+    }
+
+    .endorse-card-body {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      text-align: justify;
+      text-justify: inter-word;
+      flex: 1;
+    }
+
+    .endorsement-figure {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .endorsement-figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 10px;
+    }
+
+    .endorsement-caption {
+      font-size: 12px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.5;
+      margin: 0;
     }
 
     audio {
@@ -310,6 +318,10 @@
       padding: 4px 0 10px;
       text-transform: uppercase;
       letter-spacing: 0.12em;
+    }
+
+    @media (max-width: 900px) {
+      .endorsement-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 768px) {
@@ -339,10 +351,6 @@
       .endorse-text,
       .resource-text,
       .comic-meta { font-size: 16px; }
-
-      .endorsement-wrap { grid-template-columns: 1fr; }
-
-      .resources-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -382,45 +390,42 @@
       <section id="endorsement">
         <div class="section-title">Endorsement</div>
 
-        <div class="endorsement-wrap">
-          <div>
-            <p class="endorse-text">
-              As endorsed at Davos by by Donald Trump, Elon Musk™, the Dalai Lama, and Russell Crowe.
-            </p>
+        <p class="endorse-text">
+          As endorsed at Davos by Donald Trump, Elon Musk™, the Dalai Lama, and Russell Crowe.
+        </p>
 
-            <div class="resources-grid">
-              <div class="resource-card">
-                <div class="resource-title">Turtleman explainer (PDF)</div>
-                <p class="resource-text">
-                  A short retrospective and brand manifesto, in case anyone needs a formal document to justify reading a comic about nothing.
-                </p>
-                <a class="resource-button" href="Turtleman_Global_Operations_Retrospective-compressed.pdf">Open / Download</a>
-              </div>
-
-              <div class="resource-card">
-                <div class="resource-title">Podcast explainer (Audio)</div>
-                <p class="resource-text">
-                  Turtleman explained by the poscast experts at TED Inc
-                </p>
-                <audio controls preload="none">
-                  <source src="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a" type="audio/mp4">
-                  Your browser does not support the audio element.
-                </audio>
-                <a class="resource-button" href="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a">Download Audio</a>
-              </div>
-            </div>
+        <div class="endorsement-grid">
+          <div class="endorse-card">
+            <div class="endorse-card-title">The endorsement team</div>
+            <figure class="endorsement-figure">
+              <img
+                src="ChatGPT%20Image%20Jan%2025,%202026,%2012_44_25%20PM.png"
+                alt="Turtleman endorsement image (satire)"
+                loading="lazy"
+              >
+              <figcaption class="endorsement-caption">The endorsement team with Turtleman at Davos</figcaption>
+            </figure>
           </div>
 
-          <figure class="endorsement-figure">
-            <img
-              src="ChatGPT%20Image%20Jan%2025,%202026,%2012_44_25%20PM.png"
-              alt="Turtleman endorsement image (satire)"
-              loading="lazy"
-            >
-            <figcaption class="endorsement-caption">
-              The endorsement team with Turtleman at Davos
-            </figcaption>
-          </figure>
+          <div class="endorse-card">
+            <div class="endorse-card-title">Turtleman explainer (PDF)</div>
+            <div class="endorse-card-body">
+              A short retrospective and brand manifesto, in case anyone needs a formal document to justify reading a comic about nothing.
+            </div>
+            <a class="resource-button" href="Turtleman_Global_Operations_Retrospective-compressed.pdf">Open / Download</a>
+          </div>
+
+          <div class="endorse-card">
+            <div class="endorse-card-title">Podcast explainer (Audio)</div>
+            <div class="endorse-card-body">
+              Turtleman explained by the podcast experts at TED Inc.
+            </div>
+            <audio controls preload="none">
+              <source src="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a" type="audio/mp4">
+              Your browser does not support the audio element.
+            </audio>
+            <a class="resource-button" href="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a">Download Audio</a>
+          </div>
         </div>
       </section>
 
@@ -514,7 +519,6 @@
               <a href="Issue_7.pdf" class="comic-download">Download</a>
             </div>
           </article>
-
         </div>
       </section>
     </main>
