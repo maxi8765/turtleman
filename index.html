@@ -12,6 +12,7 @@
   <title>Turtleman Comics • Free Downloads</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Read and download free Turtleman comics as PDF.">
+
   <style>
     :root {
       font-family: "Trebuchet MS", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -66,7 +67,6 @@
       height: 300px;
       width: auto;
       display: block;
-      image-rendering: crisp-edges;
     }
 
     .brand-text-main {
@@ -108,8 +108,6 @@
       justify-content: flex-start;
     }
 
-    .hero { gap: 16px; }
-
     .hero-title {
       font-size: clamp(34px, 6vw, 48px);
       line-height: 1.1;
@@ -117,12 +115,14 @@
       color: var(--headline);
     }
 
-    .hero-tagline {
+    .hero-tagline,
+    .about-text,
+    .endorse-text,
+    .comic-meta {
       font-size: 18px;
       line-height: 1.6;
       color: var(--ink-soft);
       text-align: justify;
-      text-justify: inter-word;
     }
 
     .hero-meta {
@@ -142,19 +142,8 @@
       margin-bottom: 16px;
     }
 
-    .about-text,
-    .endorse-text,
-    .resource-text {
-      font-size: 18px;
-      line-height: 1.6;
-      color: var(--ink-soft);
-      text-align: justify;
-      text-justify: inter-word;
-    }
-
     .comics-header-line {
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       gap: 10px;
       margin-bottom: 16px;
@@ -172,7 +161,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 14px;
-      margin-top: 4px;
     }
 
     .comic-card {
@@ -182,7 +170,6 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      height: 100%;
     }
 
     .comic-tag {
@@ -197,15 +184,6 @@
       font-weight: 700;
       text-transform: uppercase;
       color: var(--panel-green);
-    }
-
-    .comic-meta {
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--ink-soft);
-      flex: 1;
-      text-align: justify;
-      text-justify: inter-word;
     }
 
     .comic-footer {
@@ -223,8 +201,7 @@
       letter-spacing: 0.1em;
     }
 
-    .comic-download,
-    .resource-button {
+    .comic-download {
       font-size: 12px;
       border-radius: 0;
       padding: 8px 12px;
@@ -239,8 +216,7 @@
       display: inline-block;
     }
 
-    .comic-download:hover,
-    .resource-button:hover {
+    .comic-download:hover {
       background: var(--panel-green-light);
     }
 
@@ -249,7 +225,6 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
       margin-top: 14px;
-      align-items: stretch;
     }
 
     .endorse-card {
@@ -259,7 +234,6 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      height: 100%;
     }
 
     .endorse-card-title {
@@ -274,23 +248,12 @@
       font-size: 16px;
       line-height: 1.6;
       color: var(--ink-soft);
+      flex: 1;
       text-align: justify;
-      text-justify: inter-word;
-      flex: 1;
-    }
-
-    .endorsement-figure {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex: 1;
     }
 
     .endorsement-figure img {
       width: 100%;
-      height: auto;
-      display: block;
       border: 2px solid var(--ink);
       background: #fdf5da;
       padding: 10px;
@@ -301,8 +264,6 @@
       color: var(--ink-soft);
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      line-height: 1.5;
-      margin: 0;
     }
 
     audio {
@@ -322,38 +283,11 @@
 
     @media (max-width: 900px) {
       .endorsement-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
       .logo-img { height: 150px; }
-
-      .header-note {
-        text-align: left;
-        max-width: none;
-      }
-
-      section {
-        padding: 20px 16px;
-        min-height: 220px;
-      }
-
-      .hero-title { font-size: 28px; }
-
-      .section-title { font-size: 26px; }
-
-      .hero-tagline,
-      .about-text,
-      .endorse-text,
-      .resource-text,
-      .comic-meta { font-size: 16px; }
     }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header>
@@ -370,7 +304,7 @@
     </header>
 
     <main>
-      <section class="hero" id="title">
+      <section class="hero">
         <div class="hero-title">Free Turtleman comics.</div>
         <p class="hero-tagline">
           Old-school superhero on yellowing paper, generated with just enough AI slop to be honest about it. Download the full issues as PDFs and read them wherever you like.
@@ -397,35 +331,23 @@
         <div class="endorsement-grid">
           <div class="endorse-card">
             <div class="endorse-card-title">The endorsement team</div>
-            <figure class="endorsement-figure">
-              <img
-                src="ChatGPT%20Image%20Jan%2025,%202026,%2012_44_25%20PM.png"
-                alt="Turtleman endorsement image (satire)"
-                loading="lazy"
-              >
-              <figcaption class="endorsement-caption">The endorsement team with Turtleman at Davos</figcaption>
-            </figure>
+            <img
+              src="ChatGPT%20Image%20Jan%2025,%202026,%2012_44_25%20PM.png"
+              alt="Turtleman endorsement image (satire)">
+            <div class="endorsement-caption">
+              The endorsement team with Turtleman at Davos
+            </div>
           </div>
 
           <div class="endorse-card">
             <div class="endorse-card-title">Turtleman explainer (PDF)</div>
             <div class="endorse-card-body">
               A short retrospective and brand manifesto, in case anyone needs a formal document to justify reading a comic about nothing.
-              <a class="resource-button"
-                 href="Turtleman_Global_Operations_Retrospective-compressed.pdf"
-                 target="_blank"
-                 rel="noopener">
-                Open (new tab)
-              </a>
-              <div style="margin-top:12px;border:2px solid var(--ink);background:#fdf5da;">
-              <iframe
-                src="Turtleman_Global_Operations_Retrospective-compressed.pdf"
-                title="Turtleman explainer PDF"
-                style="width:100%;height:520px;border:0;"
-                loading="lazy">
-              </iframe>
             </div>
-
+            <a href="Turtleman_Global_Operations_Retrospective-compressed.pdf"
+               class="comic-download">
+              Open / Download
+            </a>
           </div>
 
           <div class="endorse-card">
@@ -435,9 +357,11 @@
             </div>
             <audio controls preload="none">
               <source src="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a" type="audio/mp4">
-              Your browser does not support the audio element.
             </audio>
-            <a class="resource-button" href="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a">Download Audio</a>
+            <a href="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a"
+               class="comic-download">
+              Download Audio
+            </a>
           </div>
         </div>
       </section>
@@ -452,9 +376,7 @@
           <article class="comic-card">
             <div class="comic-tag">Issue 1</div>
             <div class="comic-title">Turtleman Issue 1</div>
-            <div class="comic-meta">
-              Issue 1 is about nothing in particular. Just Turtleman wandering around, doing not much, in full costume.
-            </div>
+            <div class="comic-meta">Issue 1 is about nothing in particular.</div>
             <div class="comic-footer">
               <div class="comic-size">PDF · A4</div>
               <a href="Issue 1.pdf" class="comic-download">Download</a>
@@ -464,9 +386,7 @@
           <article class="comic-card">
             <div class="comic-tag">Issue 2</div>
             <div class="comic-title">Turtleman Issue 2</div>
-            <div class="comic-meta">
-              Issue 2 is also about nothing in particular. More slow adventures and marginally useful observations.
-            </div>
+            <div class="comic-meta">Issue 2 is also about nothing in particular.</div>
             <div class="comic-footer">
               <div class="comic-size">PDF · A4</div>
               <a href="Issue 2.pdf" class="comic-download">Download</a>
@@ -476,9 +396,7 @@
           <article class="comic-card">
             <div class="comic-tag">Issue 3</div>
             <div class="comic-title">Turtleman at another art opening</div>
-            <div class="comic-meta">
-              Issue 3 follows Turtleman at an art gallery opening. Questionable wine, polite small talk, and a cape that does not fit in crowded rooms.
-            </div>
+            <div class="comic-meta">Issue 3 follows Turtleman at an art gallery opening.</div>
             <div class="comic-footer">
               <div class="comic-size">PDF · A4</div>
               <a href="Issue_3.pdf" class="comic-download">Download</a>
@@ -488,9 +406,7 @@
           <article class="comic-card">
             <div class="comic-tag">Issue 4</div>
             <div class="comic-title">Turtleman in India</div>
-            <div class="comic-meta">
-              Issue 4 is Turtleman in India. Trade shows, tech summits, hotel bars and long days in a costume that was not designed for the climate.
-            </div>
+            <div class="comic-meta">Issue 4 is Turtleman in India.</div>
             <div class="comic-footer">
               <div class="comic-size">PDF · A4</div>
               <a href="Issue_4.pdf" class="comic-download">Download</a>
@@ -500,9 +416,7 @@
           <article class="comic-card">
             <div class="comic-tag">Issue 5</div>
             <div class="comic-title">Turtleman in Indo</div>
-            <div class="comic-meta">
-              Issue 5 is Turtleman in Indonesia. A family holiday through Bali and Lombok: scooters and ferries, airport runs, villas full of cats, gluten-free optimism, beach bars, minor illness, and the usual slow heroics in a place that does not care about capes.
-            </div>
+            <div class="comic-meta">Issue 5 is Turtleman in Indonesia.</div>
             <div class="comic-footer">
               <div class="comic-size">PDF · A4</div>
               <a href="Issue_5.pdf" class="comic-download">Download</a>
@@ -512,9 +426,7 @@
           <article class="comic-card">
             <div class="comic-tag">Issue 6</div>
             <div class="comic-title">Turtleman in South America</div>
-            <div class="comic-meta">
-              Issue 6 is Turtleman in South America. A family run through Buenos Aires, Mendoza and Manzano: long-haul flights, airport lounges, altitude mishaps, horses, river dinners, stray logistics, light confusion across borders, and plenty of beer.
-            </div>
+            <div class="comic-meta">Issue 6 is Turtleman in South America.</div>
             <div class="comic-footer">
               <div class="comic-size">PDF · A4</div>
               <a href="Issue_6.pdf" class="comic-download">Download</a>
@@ -524,9 +436,7 @@
           <article class="comic-card">
             <div class="comic-tag">Issue 7</div>
             <div class="comic-title">Turtleman in Sydney</div>
-            <div class="comic-meta">
-              Turtleman’s Sydney adventure is a caffeine-fuelled loop of wrong trams, serious meetings, old friends, too many coffees, too many beers, and just enough business to justify it all.
-            </div>
+            <div class="comic-meta">Turtleman’s Sydney adventure.</div>
             <div class="comic-footer">
               <div class="comic-size">PDF · A4</div>
               <a href="Issue_7.pdf" class="comic-download">Download</a>
