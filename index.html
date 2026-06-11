@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W32Z1XNRW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-5W32Z1XNRW');
+  </script>
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta charset="UTF-8">
+  <title>Turtleman Comics by Ian Maxwell | Free Satirical PDF Downloads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turtleman is Ian Maxwell&apos;s free satirical comic series, with printable A4 PDF issues about AI, business, travel, language and technology.">
+
+  <meta name="author" content="Ian Maxwell">
+  <link rel="canonical" href="https://maxi8765.github.io/turtleman/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Turtleman Comics by Ian Maxwell">
+  <meta property="og:description" content="Free satirical Turtleman comics by Ian Maxwell, available as printable A4 PDF downloads.">
+  <meta property="og:url" content="https://maxi8765.github.io/turtleman/">
+  <meta property="og:image" content="https://maxi8765.github.io/turtleman/turtleman%20logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Turtleman Comics by Ian Maxwell">
+  <meta name="twitter:description" content="Free satirical Turtleman comics by Ian Maxwell, available as printable A4 PDF downloads.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "name": "Turtleman",
+    "alternateName": "Turtleman Comics",
+    "creator": {
+      "@type": "Person",
+      "name": "Ian Maxwell"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MXX1 Holdings Pty Ltd"
+    },
+    "url": "https://maxi8765.github.io/turtleman/",
+    "description": "A free satirical comic series by Ian Maxwell, published as printable A4 PDF downloads.",
+    "inLanguage": "en-AU",
+    "genre": ["Satire", "Comics", "Humour"]
+  }
+  </script>
+
+  <style>
+    :root {
+      font-family: "Trebuchet MS", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --paper: #f0dcaf;
+      --paper-dark: #e1c38a;
+      --ink: #1f1b16;
+      --ink-soft: #4b4337;
+      --headline: #b94524;
+      --panel-green: #23633b;
+      --panel-green-light: #3f8b56;
+    }
+
+    * { box-sizing: border-box; }
+
+    img, video, canvas, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #f7e7bd 0, #e4c88d 45%, #d2b276 80%) fixed;
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 12px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    header {
+      background: var(--paper-dark);
+      border: 3px solid var(--ink);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 0 0 3px #f7e7bd;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .logo-img {
+      height: 300px;
+      width: auto;
+      flex: 0 0 auto;
+    }
+
+    .brand-text-main {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--headline);
+    }
+
+    .brand-text-sub {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--ink-soft);
+    }
+
+    .header-note {
+      font-size: 13px;
+      color: var(--ink-soft);
+      text-align: right;
+      max-width: 220px;
+      flex: 0 0 auto;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    section {
+      background: var(--paper);
+      border: 3px solid var(--ink);
+      box-shadow: 0 0 0 3px #f7e7bd;
+      padding: 28px 24px;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .hero-title {
+      margin: 0 0 12px;
+      font-size: clamp(34px, 6vw, 48px);
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: var(--headline);
+    }
+
+    .hero-tagline,
+    .about-text,
+    .endorse-text,
+    .comic-meta {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      text-align: justify;
+    }
+
+    .hero-meta {
+      font-size: 16px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: auto;
+    }
+
+    .section-title {
+      font-size: 30px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--headline);
+      margin-bottom: 16px;
+    }
+
+    .comics-header-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .comics-subtitle {
+      font-size: 14px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      align-self: center;
+    }
+
+    .comic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .comic-card {
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 14px 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .comic-tag {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--ink-soft);
+    }
+
+    .comic-title {
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--panel-green);
+    }
+
+    .comic-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .comic-size {
+      font-size: 12px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .comic-download {
+      font-size: 12px;
+      border-radius: 0;
+      padding: 8px 12px;
+      border: 2px solid var(--ink);
+      background: var(--panel-green);
+      text-decoration: none;
+      color: #fdf5da;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .comic-download:hover { background: var(--panel-green-light); }
+
+    .volume-label {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+    }
+
+    .volume-2-label {
+      margin-top: 18px;
+    }
+
+    .volume-3-label {
+      margin-top: 18px;
+    }
+
+    details.volume-1 summary {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ink-soft);
+      cursor: pointer;
+      list-style: none;
+      margin-bottom: 10px;
+      opacity: 0.6;
+    }
+
+    details.volume-1 summary::-webkit-details-marker { display: none; }
+
+    details.volume-1 summary::after {
+      content: " ›";
+    }
+
+    details.volume-1[open] summary::after {
+      content: " ↓";
+    }
+
+    details.volume-1[open] .comic-grid {
+      margin-top: 10px;
+    }
+
+    .endorsement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+      align-items: stretch;
+    }
+
+    .endorse-card {
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 14px 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .endorse-card-title {
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--panel-green);
+    }
+
+    .endorse-card-body {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      flex: 1;
+      text-align: justify;
+      min-width: 0;
+    }
+
+    .endorse-card img {
+      width: 100%;
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 10px;
+    }
+
+    .endorsement-caption {
+      font-size: 12px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.4;
+    }
+
+    audio {
+      width: 100%;
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      display: block;
+    }
+
+    footer {
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-align: center;
+      padding: 4px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    @media (max-width: 900px) {
+      .endorsement-grid { grid-template-columns: 1fr; }
+      .logo-img { height: 170px; }
+      header { align-items: flex-start; }
+      .header-note { text-align: left; max-width: none; }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 14px 14px;
+        gap: 12px;
+      }
+
+      section {
+        padding: 18px 14px;
+      }
+
+      .brand { gap: 12px; }
+      .logo-img { height: 140px; }
+
+      .brand-text-main { font-size: 24px; }
+      .brand-text-sub { font-size: 12px; }
+
+      .section-title { font-size: 24px; }
+
+      .hero-title { font-size: 28px; }
+
+      .hero-tagline,
+      .about-text,
+      .endorse-text,
+      .comic-meta { font-size: 16px; }
+
+      .comic-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <img src="turtleman%20logo.png" alt="Turtleman logo" class="logo-img">
+        <div>
+          <div class="brand-text-main">Turtleman</div>
+          <div class="brand-text-sub">Very Slow Adventures</div>
+        </div>
+      </div>
+      <div class="header-note">
+        Free PDF comic. 60s and 70s cheap superhero energy.
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1 class="hero-title">Turtleman Comics by Ian Maxwell</h1>
+        <p class="hero-tagline">
+          Turtleman is a free satirical comic series by Ian Maxwell, published as printable A4 PDF issues. The series covers AI, business, travel, language, technology and modern institutional nonsense through black-and-white comic posters, fake diagrams and downloadable comic issues.
+        </p>
+        <p class="hero-tagline">
+          Old-school superhero on yellowing paper, generated with just enough AI slop to be honest about it. To be clear, we reject slop-shamers and all that they represent. Download the full issues as PDFs and read them wherever you like.
+        </p>
+        <div class="hero-meta">
+          A4 pages · tablet friendly · printable
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-title">About Turtleman</div>
+        <p class="about-text">
+          Turtleman is a free comic by Ian Maxwell, inspired by the great cheap superhero comics of the 60s and 70s (especially our fave, the Phantom). Turtleman is pointless and possibly the most useless superhero ever (aren't they all though?). Developed as a travelling aid (to prevent boredom and communicate efficiently to the troops back home without endless phone calls), Turtleman leans into "AI Slop" making it a feature, not a bug.
+        </p>
+      </section>
+
+      <section id="endorsement">
+        <div class="section-title">Endorsement</div>
+
+        <p class="endorse-text">
+          As endorsed at Davos by Donald Trump, Elon Musk™, the Dalai Lama, and Russell Crowe.
+        </p>
+
+        <div class="endorsement-grid">
+          <div class="endorse-card">
+            <div class="endorse-card-title">The endorsement team</div>
+            <img
+              src="ChatGPT%20Image%20Jan%2025,%202026,%2012_44_25%20PM.png"
+              alt="Turtleman endorsement image (satire)">
+            <div class="endorsement-caption">
+              The endorsement team with Turtleman at Davos
+            </div>
+          </div>
+
+          <div class="endorse-card">
+            <div class="endorse-card-title">Turtleman explainer (PDF)</div>
+            <div class="endorse-card-body">
+              A short retrospective and brand manifesto, in case anyone needs a formal document to justify reading a comic about nothing.
+            </div>
+            <a href="Turtleman_Global_Operations_Retrospective-compressed.pdf" class="comic-download" aria-label="Download Turtleman_Global_Operations_Retrospective-compressed.pdf Turtleman comic PDF by Ian Maxwell">Open / Download</a>
+          </div>
+
+          <div class="endorse-card">
+            <div class="endorse-card-title">Podcast explainer (Audio)</div>
+            <div class="endorse-card-body">
+              Turtleman explained by the podcast experts at TED Inc.
+            </div>
+            <audio controls preload="none">
+              <source src="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a" type="audio/mp4">
+            </audio>
+            <a href="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a" class="comic-download">Download Audio</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="comics">
+        <div class="comics-header-line">
+          <div class="section-title">Free Turtleman comics</div>
+          <div class="comics-subtitle">Click any issue to download the PDF</div>
+        </div>
+
+        <details class="volume-1">
+          <summary>Volume 1 — The early stuff (range finders)</summary>
+          <div class="comic-grid">
+          <article class="comic-card">
+            <div class="comic-tag">Issue 1</div>
+            <div class="comic-title">Turtleman Issue 1</div>
+            <div class="comic-meta">Issue 1 is about nothing in particular. Just Turtleman wandering around, doing not much, in full costume.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue 1.pdf" class="comic-download" aria-label="Download Issue 1.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 2</div>
+            <div class="comic-title">Turtleman Issue 2</div>
+            <div class="comic-meta">Issue 2 is also about nothing in particular. More slow adventures and marginally useful observations.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue 2.pdf" class="comic-download" aria-label="Download Issue 2.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 3</div>
+            <div class="comic-title">Turtleman at another art opening</div>
+            <div class="comic-meta">Issue 3 follows Turtleman at an art gallery opening. Questionable wine, polite small talk, and a cape that does not fit in crowded rooms.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_3.pdf" class="comic-download" aria-label="Download Issue_3.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          </div>
+        </details>
+
+        <details class="volume-1">
+          <summary>Volume 2 — The travel stuff, 2025 and 2026</summary>
+          <div class="comic-grid">
+          <article class="comic-card">
+            <div class="comic-tag">Issue 4</div>
+            <div class="comic-title">Turtleman in India</div>
+            <div class="comic-meta">Issue 4 is Turtleman in India. Trade shows, tech summits, hotel bars and long days in a costume that was not designed for the climate.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_4.pdf" class="comic-download" aria-label="Download Issue_4.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 5</div>
+            <div class="comic-title">Turtleman in Indo</div>
+            <div class="comic-meta">Issue 5 is Turtleman in Indonesia. A family holiday through Bali and Lombok: scooters and ferries, airport runs, villas full of cats, gluten-free optimism, beach bars, minor illness, and the usual slow heroics in a place that does not care about capes.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_5.pdf" class="comic-download" aria-label="Download Issue_5.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 6</div>
+            <div class="comic-title">Turtleman in South America</div>
+            <div class="comic-meta">Issue 6 is Turtleman in South America. A family run through Buenos Aires, Mendoza and Manzano: long-haul flights, airport lounges, altitude mishaps, horses, river dinners, stray logistics, light confusion across borders, and plenty of beer.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_6.pdf" class="comic-download" aria-label="Download Issue_6.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 7</div>
+            <div class="comic-title">Turtleman in Sydney</div>
+            <div class="comic-meta">Turtleman’s Sydney adventure is a caffeine-fuelled loop of wrong trams, serious meetings, old friends, too many coffees, too many beers, and just enough business to justify it all.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_7.pdf" class="comic-download" aria-label="Download Issue_7.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+          
+          <article class="comic-card">
+            <div class="comic-tag">Issue 8</div>
+            <div class="comic-title">Turtleman in the USA</div>
+            <div class="comic-meta"> Turtleman in the USA, an odd story about the weirdness of the USA, parties, trade shows, airports, and hotel bureaucracy.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_8.pdf" class="comic-download" aria-label="Download Issue_8.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 11</div>
+            <div class="comic-title">Turtleman in Melbourne</div>
+            <div class="comic-meta"> Turtleman and the troops head to Melbourne to check it out one more time. </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_11.pdf#view=FitH" class="comic-download" aria-label="Download Issue_11.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 12</div>
+            <div class="comic-title">Turtleman in Adelaide</div>
+            <div class="comic-meta"> Turtleman resolves to figure out, once and for all, why is Adelaide.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_12.pdf#view=FitH" class="comic-download" aria-label="Download Issue_12.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 16</div>
+            <div class="comic-title">Turtleman in the Philippines, Oman, Turkey, the Netherlands, the UK and Ireland volume 1</div>
+            <div class="comic-meta"> Turtleman and family take off to explore all sorts of weird arse places.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_16.pdf#view=FitH" class="comic-download" aria-label="Download Issue_16.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 20</div>
+            <div class="comic-title">Turtleman in the Philippines, Oman, Turkey, the Netherlands, the UK and Ireland volume 2</div>
+            <div class="comic-meta"> Turtleman continues to explore all sorts of weird arse places.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_20.pdf#view=FitH" class="comic-download" aria-label="Download Issue_20.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+        </div>
+        </details>
+
+        <details class="volume-1">
+          <summary>Volume 3 — The other, mostly inexplicable stuff</summary>
+          <div class="comic-grid">
+          <article class="comic-card">
+            <div class="comic-tag">Issue 9</div>
+            <div class="comic-title">Turtleman at Home</div>
+            <div class="comic-meta"> Turtlewoman pisses off to the US, leaving Turtleman to hold the fort. </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_9.pdf#view=FitH" class="comic-download" aria-label="Download Issue_9.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 10</div>
+            <div class="comic-title">Turtleman joins the Band</div>
+            <div class="comic-meta"> Turtleman does strange musical shit for no good reason we can think of. </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_10.pdf#view=FitH" class="comic-download" aria-label="Download Issue_10.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 13</div>
+            <div class="comic-title">Turtleman files a patent</div>
+            <div class="comic-meta"> Turtleman explains his personal curse, the need to invent. </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_13.pdf#view=FitH" class="comic-download" aria-label="Download Issue_13.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 14</div>
+            <div class="comic-title">Turtleman becomes the Special Envoy to the Middle East</div>
+            <div class="comic-meta"> The Middle East is doing it again and it's inconvenient for some, so they call Turtleman to go in for the fix.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_14.pdf#view=FitH" class="comic-download" aria-label="Download Issue_14.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 15</div>
+            <div class="comic-title">Turtleman The Neologist</div>
+            <div class="comic-meta"> Turtleman decides to chase Will down a rabbit hole of his own making.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_15.pdf#view=FitH" class="comic-download" aria-label="Download Issue_15.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 17</div>
+            <div class="comic-title">Turtleman The Neologist Volume 2</div>
+            <div class="comic-meta"> Turtleman continues to chase Will down a rabbit hole of his own making.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_17.pdf#view=FitH" class="comic-download" aria-label="Download Issue_17.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 18</div>
+            <div class="comic-title">Turtleman The Neologist Volume 3</div>
+            <div class="comic-meta"> Turtleman continues to chase Will down a rabbit hole of his own making.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_18.pdf#view=FitH" class="comic-download" aria-label="Download Issue_18.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 19</div>
+            <div class="comic-title">Turtleman The Neologist Volume 4</div>
+            <div class="comic-meta"> Turtleman continues to chase Will down a rabbit hole of his own making.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_19.pdf#view=FitH" class="comic-download" aria-label="Download Issue_19.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 21</div>
+            <div class="comic-title">Turtleman The Neologist Volume 5</div>
+            <div class="comic-meta"> Turtleman the Neologist strikes again - new words and new inventions designed to light up your day.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_21.pdf#view=FitH" class="comic-download" aria-label="Download Issue_21.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 22</div>
+            <div class="comic-title">Turtleman The Neologist Volume 6</div>
+            <div class="comic-meta"> Turtleman the Neologist strikes again - new words and new inventions designed to light up your day.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_22.pdf#view=FitH" class="comic-download" aria-label="Download Issue_22.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+              
+          <article class="comic-card">
+            <div class="comic-tag">Issue 23</div>
+            <div class="comic-title">Turtleman ponders some truths and AI slop</div>
+            <div class="comic-meta"> Turtleman just makes up a bunch of rubbish for no good reason we can think of.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_23.pdf#view=FitH" class="comic-download" aria-label="Download Issue_23.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+        <article class="comic-card">
+            <div class="comic-tag">Issue 24</div>
+            <div class="comic-title">Turtleman and the Chicken Zombie Apocalypse</div>
+            <div class="comic-meta"> Turtleman fights for justice and freedom in the era of killer viruses.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_24.pdf#view=FitH" class="comic-download" aria-label="Download Issue_24.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+        <article class="comic-card">
+            <div class="comic-tag">Issue 25</div>
+            <div class="comic-title">Turtleman and the Coming 2.0</div>
+            <div class="comic-meta"> Turtleman does what we all know you shouldn't - mix politics, religion and AI.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_25.pdf#view=FitH" class="comic-download" aria-label="Download Issue_25.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          
+        </div>
+        </details>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    © MXX1 Holdings Pty Ltd 2026
+  </footer>
+</body>
+</html>
+
+
