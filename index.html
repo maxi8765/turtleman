@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5W32Z1XNRW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-5W32Z1XNRW');
+  </script>
+  <link rel="canonical" href="https://maxi8765.github.io/turtleman/">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta charset="UTF-8">
+  <title>Turtleman Comics | Free Satirical PDF Downloads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turtleman is a free satirical comic series, with printable A4 PDF issues about AI, business, travel, language and technology.">
+
+  <link rel="canonical" href="https://maxi8765.github.io/turtleman/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Turtleman Comics">
+  <meta property="og:description" content="Free satirical Turtleman comics, available as printable A4 PDF downloads.">
+  <meta property="og:url" content="https://maxi8765.github.io/turtleman/">
+  <meta property="og:image" content="https://maxi8765.github.io/turtleman/turtleman%20logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Turtleman Comics">
+  <meta name="twitter:description" content="Free sTurtleman comics, available as printable A4 PDF downloads.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWorkSeries",
+    "name": "Turtleman",
+    "alternateName": "Turtleman Comics",
+    "creator": {
+      "@type": "Person",
+      "name": "Ian Maxwell"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MXX1 Holdings Pty Ltd"
+    },
+    "url": "https://maxi8765.github.io/turtleman/",
+    "description": "A free satirical comic series, published as printable A4 PDF downloads.",
+    "inLanguage": "en-AU",
+    "genre": ["Satire", "Comics", "Humour"]
+  }
+  </script>
+
+  <style>
+    :root {
+      font-family: "Trebuchet MS", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --paper: #f0dcaf;
+      --paper-dark: #e1c38a;
+      --ink: #1f1b16;
+      --ink-soft: #4b4337;
+      --headline: #b94524;
+      --panel-green: #23633b;
+      --panel-green-light: #3f8b56;
+    }
+
+    * { box-sizing: border-box; }
+
+    img, video, canvas, svg {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #f7e7bd 0, #e4c88d 45%, #d2b276 80%) fixed;
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 12px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    header {
+      background: var(--paper-dark);
+      border: 3px solid var(--ink);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: 0 0 0 3px #f7e7bd;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .logo-img {
+      height: 300px;
+      width: auto;
+      flex: 0 0 auto;
+    }
+
+    .brand-text-main {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--headline);
+    }
+
+    .brand-text-sub {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--ink-soft);
+    }
+
+    .header-note {
+      font-size: 13px;
+      color: var(--ink-soft);
+      text-align: right;
+      max-width: 220px;
+      flex: 0 0 auto;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    section {
+      background: var(--paper);
+      border: 3px solid var(--ink);
+      box-shadow: 0 0 0 3px #f7e7bd;
+      padding: 28px 24px;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .hero-title {
+      margin: 0 0 12px;
+      font-size: clamp(34px, 6vw, 48px);
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: var(--headline);
+    }
+
+    .hero-tagline,
+    .about-text,
+    .endorse-text,
+    .comic-meta {
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      text-align: justify;
+    }
+
+    .hero-meta {
+      font-size: 16px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: auto;
+    }
+
+    .section-title {
+      font-size: 30px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--headline);
+      margin-bottom: 16px;
+    }
+
+    .comics-header-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .comics-subtitle {
+      font-size: 14px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      align-self: center;
+    }
+
+    .comic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .comic-card {
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 14px 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .comic-tag {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--ink-soft);
+    }
+
+    .comic-title {
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--panel-green);
+    }
+
+    .comic-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 4px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .comic-size {
+      font-size: 12px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .comic-download {
+      font-size: 12px;
+      border-radius: 0;
+      padding: 8px 12px;
+      border: 2px solid var(--ink);
+      background: var(--panel-green);
+      text-decoration: none;
+      color: #fdf5da;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      white-space: nowrap;
+      display: inline-block;
+    }
+
+    .comic-download:hover { background: var(--panel-green-light); }
+
+    .volume-label {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ink-soft);
+      margin-bottom: 10px;
+    }
+
+    .volume-2-label {
+      margin-top: 18px;
+    }
+
+    .volume-3-label {
+      margin-top: 18px;
+    }
+
+    details.volume-1 {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 2px solid var(--ink-soft);
+    }
+
+    details.volume-1:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    details.volume-1 summary {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ink-soft);
+      cursor: pointer;
+      list-style: none;
+      margin-bottom: 10px;
+      opacity: 0.6;
+    }
+
+    details.volume-1 summary::-webkit-details-marker { display: none; }
+
+    details.volume-1 summary::after {
+      content: " ›";
+    }
+
+    details.volume-1[open] summary::after {
+      content: " ↓";
+    }
+
+    details.volume-1[open] .comic-grid {
+      margin-top: 10px;
+    }
+
+    .endorsement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+      align-items: stretch;
+    }
+
+    .endorse-card {
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 14px 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .endorse-card-title {
+      font-size: 16px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--panel-green);
+    }
+
+    .endorse-card-body {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      flex: 1;
+      text-align: justify;
+      min-width: 0;
+    }
+
+    .endorse-card img {
+      width: 100%;
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      padding: 10px;
+    }
+
+    .endorsement-caption {
+      font-size: 12px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      line-height: 1.4;
+    }
+
+    audio {
+      width: 100%;
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      display: block;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-fields {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .contact-fields input {
+      flex: 1;
+      min-width: 180px;
+      padding: 10px 12px;
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--ink);
+      outline: none;
+    }
+
+    .contact-fields input:focus,
+    .contact-textarea:focus {
+      border-color: var(--panel-green);
+    }
+
+    .contact-textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid var(--ink);
+      background: #fdf5da;
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--ink);
+      resize: vertical;
+      min-height: 90px;
+      outline: none;
+    }
+
+    .contact-send {
+      align-self: flex-start;
+      padding: 10px 20px;
+      border: 2px solid var(--ink);
+      background: var(--panel-green);
+      color: #fdf5da;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+    }
+
+    .contact-send:hover { background: var(--panel-green-light); }
+
+    footer {
+      font-size: 11px;
+      color: var(--ink-soft);
+      text-align: center;
+      padding: 4px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    @media (max-width: 900px) {
+      .endorsement-grid { grid-template-columns: 1fr; }
+      .logo-img { height: 170px; }
+      header { align-items: flex-start; }
+      .header-note { text-align: left; max-width: none; }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 14px 14px;
+        gap: 12px;
+      }
+
+      section {
+        padding: 18px 14px;
+      }
+
+      .brand { gap: 12px; }
+      .logo-img { height: 140px; }
+
+      .brand-text-main { font-size: 24px; }
+      .brand-text-sub { font-size: 12px; }
+
+      .section-title { font-size: 24px; }
+
+      .hero-title { font-size: 28px; }
+
+      .hero-tagline,
+      .about-text,
+      .endorse-text,
+      .comic-meta { font-size: 16px; }
+
+      .comic-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <img src="turtleman%20logo.png" alt="Turtleman logo" class="logo-img">
+        <div>
+          <div class="brand-text-main">Turtleman</div>
+          <div class="brand-text-sub">Very Slow Adventures</div>
+        </div>
+      </div>
+      <div class="header-note">
+        Free PDF comic. 60s and 70s cheap superhero energy.
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1 class="hero-title">Turtleman Comics</h1>
+        <p class="hero-tagline">
+          Turtleman is a freecomic series, published as printable A4 PDF issues. The series covers AI, business, travel, language, technology and modern institutional nonsense.
+        </p>
+        <p class="hero-tagline">
+          Old-school superhero on yellowing paper, generated with just enough AI slop to be honest about it. To be clear, we reject slop-shamers and all that they represent. Download the full issues as PDFs and read them wherever you like.
+        </p>
+        <div class="hero-meta">
+          A4 pages · tablet friendly · printable
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="section-title">About Turtleman</div>
+        <p class="about-text">
+          Turtleman is a free comic, inspired by the great cheap superhero comics of the 60s and 70s (especially our fave, the Phantom). Turtleman is pointless and possibly the most useless superhero ever (aren't they all though?). Developed as a travelling aid (to prevent boredom and communicate efficiently to the troops back home without endless phone calls), Turtleman leans into "AI Slop" making it a feature, not a bug.
+        </p>
+      </section>
+
+      <section id="why-turtleman">
+        <div class="section-title">Why Turtleman Matters</div>
+
+        <p class="about-text">
+          Turtleman does not save anyone, does not fight crime, does not foil plots or arrive at the last second to catch the falling child. He wanders through art openings, hotel bars, trade shows and airport lounges in a costume that does not fit the climate, doing not much, in full costume, and calling it a mission, and by his own billing he is possibly the most useless superhero ever created, which turns out to be the whole point of him rather than a flaw in the concept.
+        </p>
+        <p class="about-text">
+          Every other superhero exists to resolve a crisis, whereas Turtleman exists mainly to demonstrate that most of life does not have one. He shows up in India for a trade show, in Bali for a family holiday, in Sydney for a caffeine loop of wrong trams and too many beers, in Adelaide trying to work out, once and for all, why Adelaide, and none of it carries any real stakes, because nobody in these stories needs rescuing. In a culture that has trained itself to treat every inconvenience as an emergency and every emergency as an injustice, a hero whose entire arc amounts to mild boredom ends up doing more honest work than the ones punching villains through buildings.
+        </p>
+        <p class="about-text">
+          To see why that matters, it helps to look at what has happened to human dissatisfaction over the last fifteen years, and especially the last five.
+        </p>
+
+        <div class="section-title">The comparison machine</div>
+        <p class="about-text">
+          Every culture has had some version of envy, every religion has warned against it, and every village has had someone who could not stand the neighbour's new roof, so the feeling itself is not new. What has changed is the scale and speed at which the comparison now runs, because for most of human history it was local and slow, bounded by the people in your street, your parish, your trade, and the gap between what you had and what the wealthiest person nearby had was visible but had a ceiling you could actually see.
+        </p>
+        <p class="about-text">
+          Social media took that ceiling away by widening the pool of people you compare yourself against and by handing the selection of that pool to an algorithm tuned to surface the most comparison-inducing material available, since that is what keeps people scrolling. You end up comparing your kitchen not to your neighbour's kitchen but to the best renovated kitchen belonging to the most photogenic couple in a city you have never visited, served up by a system that has learned exactly which images make you feel like you are falling behind, because that feeling is what sells the next thirty seconds of your attention.
+        </p>
+        <p class="about-text">
+          None of this is really a side effect of the technology so much as its business model, since engagement is the product and few things engage people like a quiet, corrosive sense that everyone else is doing better than they are, and outrage works on the same principle, feeding into envy in a loop where resentment at who supposedly gave someone else their advantage keeps the scroll supplied with fresh material for both feelings at once.
+        </p>
+        <p class="about-text">
+          The upshot is a population wired into a constant, low-grade comparison loop that no earlier generation had to withstand, and nobody set out deliberately to make people miserable this way so much as discovered, by accident of incentives, that a small permanent shortfall between what you have and what you are shown happens to be very good for advertising revenue. The effect lands the same regardless of intent though, producing a large number of people who cannot be satisfied no matter how good their actual circumstances are, because satisfaction was never really what the system was optimising for in the first place.
+        </p>
+
+        <div class="section-title">COVID as the accelerant</div>
+        <p class="about-text">
+          If the comparison machine was already running hot before 2020, COVID poured petrol on it by taking people who were already spending too much time on their phones and stripping away almost every other source of stimulation, meaning and status they had, so that the commute that used to structure the day disappeared, along with the office that provided low-stakes social contact and a sense of relative position that did not depend on a feed, along with the holidays and weddings and gigs that gave people something ordinary to look forward to, leaving a great many people with a phone, a house, and a slowly fraying sense of scale.
+        </p>
+        <p class="about-text">
+          It was also the first genuinely global, genuinely synchronous experience of shared risk that the social media generation had lived through, and it landed on people who had already spent a decade learning to read every experience as content and every inconvenience as grievance worth broadcasting, so that a real and legitimate fear of a novel and initially quite dangerous disease fused with an already-inflated habit of turning discomfort into complaint, leaving people frightened, bored and isolated while endlessly comparing their lockdown to someone else's, someone with a garden, someone with a boat, someone who seemed to be having a better pandemic than they were.
+        </p>
+        <p class="about-text">
+          That is a hard thing to recover from psychologically, and a lot of people did not, since the habits formed in that period, doomscrolling as the default state, treating personal discomfort as evidence of systemic failure, expecting a frictionless and risk-free existence as a baseline entitlement rather than a historical anomaly, did not switch off when the lockdowns ended but instead settled into the ambient mood of the years since.
+        </p>
+
+        <div class="section-title">The unsatisfiable citizen</div>
+        <p class="about-text">
+          What results is a cohort of people, and a genuinely large one rather than a fringe, who cannot be satisfied no matter what they actually have, though none of this is meant to claim their material circumstances are perfect, since plenty of people do have real and legitimate grievances about housing, wages, healthcare and opportunity that this argument is not trying to wave away. What sits on top of those real grievances, though, is a separate layer of manufactured dissatisfaction that has less to do with actual material conditions and more to do with the comparison machine described above, and it is entirely possible under that layer to have a safer, wealthier, longer, more convenient life than almost any human in history while still feeling, hour to hour, cheated of something, because the feed has just shown you someone who appears to have more of it.
+        </p>
+        <p class="about-text">
+          That part is genuinely new, because earlier generations of the discontented usually had a fairly accurate read on their own position, knowing they were poor, or oppressed, or denied a vote, or denied land, with their discontent tracking something real and specific that could, in principle, be fixed. A meaningful share of today's discontent does not track anything fixable in the same way, since it is not really about the thing it claims to be about so much as a mood in search of a cause, produced by a system optimised to generate exactly that mood, ready to attach itself to whatever cause is nearest and loudest, immigration, elites, experts, the media, whichever government happens to be in office, because the underlying feeling needs a target more than it needs an accurate one.
+        </p>
+
+        <div class="section-title">Grievance politics as catharsis, not remedy</div>
+        <p class="about-text">
+          This is the environment that produces the appeal of politicians like Donald Trump, Pauline Hanson and Nigel Farage, whatever else might be said about any of them, and there is a great deal to say, because their common political product is not really a policy program in the ordinary sense so much as catharsis, the promise that someone finally sees how badly you have been wronged, that the wrongness sits not in your own unsatisfiable expectations but in a corrupt system, a smug establishment, a class of experts and elites who have been quietly robbing you, and that the fix is to tear the whole apparatus down and hand it to someone loyal to you alone.
+        </p>
+        <p class="about-text">
+          That message lands well on a population primed by fifteen years of manufactured comparison and five years of pandemic-grade isolation, since it offers an external explanation for a feeling that is largely internal and structural, and it is far more comfortable to believe your discontent comes from a rigged system than to recognise you have been trained, by a business model, to feel discontented regardless of your circumstances. The politician who says the system is rigged is not wrong about everything, because systems usually do have real flaws, but he is offering the explanation that asks nothing of you and nothing about the feed in your pocket, while often running his own movement through that same feed, since grievance content is the highest-performing content there is and a movement built on stoking it can outcompete one built on patiently explaining trade-offs.
+        </p>
+        <p class="about-text">
+          The pitch is always framed as reclamation, taking back control, taking back the country, taking back what was stolen, while the actual mechanism tends to run the other way, since tariff wars raise prices for the people who voted to punish the elites, immigration crackdowns shrink the labour force propping up the aged care and construction sectors those same voters rely on, and attacks on judicial independence, the public service, the central bank and the press weaken the exact institutions a smaller, more exposed country needs most when a larger one decides to throw its weight around, which amounts to the economic and institutional equivalent of firing your own doctor because you are sick of feeling unwell.
+        </p>
+
+        <div class="section-title">The prophecy that fulfils itself</div>
+        <p class="about-text">
+          The fear driving support for this style of politics is, broadly, a fear of decline, cultural, economic and civilisational, and the pitch is that decline is already under way, hidden by the elites, with only a wrecking-ball leader able to stop it, except that the wrecking ball does not stop decline so much as cause it in practice, in the specific areas where the country was previously strong.
+        </p>
+        <p class="about-text">
+          A trading nation that starts a tariff war with its largest partners does not restore its manufacturing base but loses market access it will not easily win back, a country that guts its own regulatory and scientific institutions in the name of efficiency does not become more competitive but becomes the country other nations no longer trust to certify a drug, audit a bank or honour a contract, and a society that spends a decade telling itself its media, universities, courts and central bank are all corrupt organs of a hostile elite does not restore trust so much as dissolve the last shared reference points that let disagreeing citizens function as one polity. The fear was that decline was coming, and the response to the fear often manufactures the decline directly, doing it faster than the imagined conspiracy ever could have.
+        </p>
+        <p class="about-text">
+          Fear does not need to be correct to be actionable, only felt strongly enough, and a population trained by a decade of algorithmic amplification to feel everything strongly is exactly the population that will act first and check the arithmetic later, if at all. By the time tariffs have raised the cost of imported components in the domestic factory, by the time skilled migrants have taken their skills to a country that still wants them, by the time credit rating agencies and bond markets have quietly marked the country down a notch, the people who voted for the wrecking ball are often still convinced it saved them, since the alternative explanation, that they were talked into demolishing their own house, is much harder to accept than the original story about the elites.
+        </p>
+
+        <div class="section-title">Turtleman as the antidote</div>
+        <p class="about-text">
+          This is where Turtleman earns his cape, precisely by doing nothing with it, since he seems immune to all of this not because he has solved envy or grievance but because he has more or less opted out of the game that produces them. He does not chase status, does not perform outrage, is not trying to be the main character, and when Turtleman's family holiday in Bali involves scooters, ferries, gluten-free optimism, minor illness and villas full of cats, the comic does not present it as triumph or tragedy but simply as a Tuesday. When he files a patent, joins a band for no good reason anyone can think of, or gets called up as an improbable special envoy to the Middle East because it is inconvenient for someone else, the joke stays roughly the same throughout, that none of this matters very much, and that is fine.
+        </p>
+        <p class="about-text">
+          That is a genuinely useful stance to model in 2026, since a culture that has spent fifteen years teaching people that every experience should be curated, ranked and broadcast as evidence of triumph or victimhood has built up an enormous appetite for the opposite message, that most of a life is not a referendum on your worth, that boredom is not an injustice, that a bad trip through an airport is just a bad trip through an airport rather than a metaphor for civilisational collapse. Turtleman's slowness reads less like laziness and more like proportion, his uselessness less like a failure of ambition and more like a refusal to treat ambition as the only measure of a life, and he ends up looking roughly like what a person becomes once the comparison machine has stopped working on them, with the comic's quiet joke being that nothing bad follows from that. He still travels, still has a family, still gets into scrapes, still invents things because he cannot help it, only he has stopped measuring any of it against a feed.
+        </p>
+        <p class="about-text">
+          There is also something pointed in making him openly a product of AI slop, generated with just enough of it to be honest about the fact rather than pretending to a polish he does not have, given that a large share of the discontent machine runs on the gap between curated appearance and lived reality, the gleaming render versus the actual kitchen, the highlight reel versus the actual week. Turtleman avoids that gap simply by not hiding the seams, so that what you see is roughly what it is, a little rough, cheerfully low-stakes, unbothered by the absence of prestige, which reads as a small satirical jab at an economy built largely on manufactured gaps between seeming and being.
+        </p>
+        <p class="about-text">
+          None of this makes Turtleman a political program, since he will not fix housing supply or negotiate a tariff truce, but what he offers is closer to an inoculation, a standing joke aimed at the emotional infrastructure that grievance politics needs in order to function, given how hard it is to recruit a genuinely content, mildly bored person into a movement premised on the idea that they have been secretly robbed of a life they were owed, when that person is not measuring their life against an imagined, stolen alternative in the first place. Turtleman's uselessness works against the specific psychological state that figures like Trump, Hanson and Farage need their audiences to be in.
+        </p>
+
+        <div class="section-title">Why this matters more than it sounds like it should</div>
+        <p class="about-text">
+          It is easy to write off a comic about a slow, useless superhero as a bit of fun for people at trade shows and airports, but the cultural moment that produced the demand for Turtleman is the same moment producing the demand for populist demolition politics, and the two look like opposite responses to an identical starting condition, a population trained by its own information environment to feel perpetually short-changed. One response says the shortfall is real, that someone stole it from you, and that the fix is to burn down the institutions that supposedly hid the theft, while the other says the shortfall is largely manufactured, that life was always going to involve wrong trams and bad wine at gallery openings and a cape that does not fit crowded rooms, and that the sensible response is to notice that and laugh rather than rage.
+        </p>
+        <p class="about-text">
+          Satire has done this job before when a culture needed it, bringing main-character energy back down to human scale, and it tends to matter most exactly when the stakes feel highest, since that is when people are most open to being told their discontent is somebody else's fault and only a strongman can fix it. A comic that quietly insists most of life is fine, actually, even when it is inconvenient, even when nothing works out particularly well, ends up doing real cultural work against that pitch, whether or not anyone involved in making it would put it in those terms.
+        </p>
+        <p class="about-text">
+          It is worth being fair to the other side of this, since plenty of thoughtful people would argue that treating the Trump, Hanson and Farage phenomena as mostly manufactured envy lets the real grievances off too lightly, given stagnant wages, hollowed-out regional towns, immigration systems that have not kept pace with public consent, and a housing market that has locked a generation out on any reasonable set of numbers. Those grievances are real, and nothing here should be read as waving away a wage that has not moved in real terms in fifteen years, so the fairer view is probably that both things are true together, that some of the anger has a genuine cause while a large amount of its intensity, its totalising quality, its sense that nothing short of demolition will do, has been amplified well past what the underlying grievances alone would produce, by a system that profits from exactly that amplification. Turtleman is not an argument against the first part so much as a joke aimed squarely at the second.
+        </p>
+        <p class="about-text">
+          He wanders on regardless, in a costume that does not fit the climate, doing not much, and in an age built to convince everyone that not much is never enough, that might be the most useful thing a useless superhero has done yet.
+        </p>
+      </section>
+
+      <section id="endorsement">
+        <div class="section-title">Endorsement</div>
+
+        <p class="endorse-text">
+          As endorsed at Davos by Donald Trump, Elon Musk™, the Dalai Lama, and Russell Crowe.
+        </p>
+
+        <div class="endorsement-grid">
+          <div class="endorse-card">
+            <div class="endorse-card-title">The endorsement team</div>
+            <img
+              src="ChatGPT%20Image%20Jan%2025,%202026,%2012_44_25%20PM.png"
+              alt="Turtleman endorsement image (satire)">
+            <div class="endorsement-caption">
+              The endorsement team with Turtleman at Davos
+            </div>
+          </div>
+
+          <div class="endorse-card">
+            <div class="endorse-card-title">Turtleman explainer (PDF)</div>
+            <div class="endorse-card-body">
+              A short retrospective and brand manifesto, in case anyone needs a formal document to justify reading a comic about nothing.
+            </div>
+            <a href="Turtleman_Global_Operations_Retrospective-compressed.pdf" class="comic-download" aria-label="Download Turtleman_Global_Operations_Retrospective-compressed.pdf Turtleman comic PDF by Ian Maxwell">Open / Download</a>
+          </div>
+
+          <div class="endorse-card">
+            <div class="endorse-card-title">Podcast explainer (Audio)</div>
+            <div class="endorse-card-body">
+              Turtleman explained by the podcast experts at TED Inc.
+            </div>
+            <audio controls preload="none">
+              <source src="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a" type="audio/mp4">
+            </audio>
+            <a href="Turtleman_Satirizes_Corporate_Life_With_AI_Slop.m4a" class="comic-download">Download Audio</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="comics">
+        <div class="comics-header-line">
+          <div class="section-title">Free Turtleman comics</div>
+          <div class="comics-subtitle">Click any issue to download the PDF</div>
+        </div>
+
+        <details class="volume-1">
+          <summary>Volume 1 — The early stuff (range finders)</summary>
+          <div class="comic-grid">
+          <article class="comic-card">
+            <div class="comic-tag">Issue 1</div>
+            <div class="comic-title">Turtleman Issue 1</div>
+            <div class="comic-meta">Issue 1 is about nothing in particular. Just Turtleman wandering around, doing not much, in full costume.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue 1.pdf" class="comic-download" aria-label="Download Issue 1.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 2</div>
+            <div class="comic-title">Turtleman Issue 2</div>
+            <div class="comic-meta">Issue 2 is also about nothing in particular. More slow adventures and marginally useful observations.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue 2.pdf" class="comic-download" aria-label="Download Issue 2.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 3</div>
+            <div class="comic-title">Turtleman at another art opening</div>
+            <div class="comic-meta">Issue 3 follows Turtleman at an art gallery opening. Questionable wine, polite small talk, and a cape that does not fit in crowded rooms.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_3.pdf" class="comic-download" aria-label="Download Issue_3.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          </div>
+        </details>
+
+        <details class="volume-1">
+          <summary>Volume 2 — The travel stuff, 2025 and 2026</summary>
+          <div class="comic-grid">
+          <article class="comic-card">
+            <div class="comic-tag">Issue 4</div>
+            <div class="comic-title">Turtleman in India</div>
+            <div class="comic-meta">Issue 4 is Turtleman in India. Trade shows, tech summits, hotel bars and long days in a costume that was not designed for the climate.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_4.pdf" class="comic-download" aria-label="Download Issue_4.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 5</div>
+            <div class="comic-title">Turtleman in Indo</div>
+            <div class="comic-meta">Issue 5 is Turtleman in Indonesia. A family holiday through Bali and Lombok: scooters and ferries, airport runs, villas full of cats, gluten-free optimism, beach bars, minor illness, and the usual slow heroics in a place that does not care about capes.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_5.pdf" class="comic-download" aria-label="Download Issue_5.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 6</div>
+            <div class="comic-title">Turtleman in South America</div>
+            <div class="comic-meta">Issue 6 is Turtleman in South America. A family run through Buenos Aires, Mendoza and Manzano: long-haul flights, airport lounges, altitude mishaps, horses, river dinners, stray logistics, light confusion across borders, and plenty of beer.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_6.pdf" class="comic-download" aria-label="Download Issue_6.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 7</div>
+            <div class="comic-title">Turtleman in Sydney</div>
+            <div class="comic-meta">Turtleman’s Sydney adventure is a caffeine-fuelled loop of wrong trams, serious meetings, old friends, too many coffees, too many beers, and just enough business to justify it all.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_7.pdf" class="comic-download" aria-label="Download Issue_7.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+          
+          <article class="comic-card">
+            <div class="comic-tag">Issue 8</div>
+            <div class="comic-title">Turtleman in the USA</div>
+            <div class="comic-meta"> Turtleman in the USA, an odd story about the weirdness of the USA, parties, trade shows, airports, and hotel bureaucracy.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_8.pdf" class="comic-download" aria-label="Download Issue_8.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 11</div>
+            <div class="comic-title">Turtleman in Melbourne</div>
+            <div class="comic-meta"> Turtleman and the troops head to Melbourne to check it out one more time. </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_11.pdf#view=FitH" class="comic-download" aria-label="Download Issue_11.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 12</div>
+            <div class="comic-title">Turtleman in Adelaide</div>
+            <div class="comic-meta"> Turtleman resolves to figure out, once and for all, why is Adelaide.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_12.pdf#view=FitH" class="comic-download" aria-label="Download Issue_12.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 16</div>
+            <div class="comic-title">Turtleman in the Philippines, Oman, Turkey, the Netherlands, the UK and Ireland volume 1</div>
+            <div class="comic-meta"> Turtleman and family take off to explore all sorts of weird arse places.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_16.pdf#view=FitH" class="comic-download" aria-label="Download Issue_16.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 20</div>
+            <div class="comic-title">Turtleman in the Philippines, Oman, Turkey, the Netherlands, the UK and Ireland volume 2</div>
+            <div class="comic-meta"> Turtleman continues to explore all sorts of weird arse places.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_20.pdf#view=FitH" class="comic-download" aria-label="Download Issue_20.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 26</div>
+            <div class="comic-title">Turtleman in the Republic of Korea</div>
+            <div class="comic-meta"> Turtleman attends Quantum Korea 2026</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_26.pdf#view=FitH" class="comic-download" aria-label="Download Issue_26.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+           </article>
+
+        </div>
+        </details>
+
+        <details class="volume-1">
+          <summary>Volume 3 — The other, mostly inexplicable stuff</summary>
+          <div class="comic-grid">
+          <article class="comic-card">
+            <div class="comic-tag">Issue 9</div>
+            <div class="comic-title">Turtleman at Home</div>
+            <div class="comic-meta"> Turtlewoman pisses off to the US, leaving Turtleman to hold the fort. </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_9.pdf#view=FitH" class="comic-download" aria-label="Download Issue_9.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 10</div>
+            <div class="comic-title">Turtleman joins the Band</div>
+            <div class="comic-meta"> Turtleman does strange musical shit for no good reason we can think of. </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_10.pdf#view=FitH" class="comic-download" aria-label="Download Issue_10.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 13</div>
+            <div class="comic-title">Turtleman files a patent</div>
+            <div class="comic-meta"> Turtleman explains his personal curse, the need to invent. </div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_13.pdf#view=FitH" class="comic-download" aria-label="Download Issue_13.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 14</div>
+            <div class="comic-title">Turtleman becomes the Special Envoy to the Middle East</div>
+            <div class="comic-meta"> The Middle East is doing it again and it's inconvenient for some, so they call Turtleman to go in for the fix.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_14.pdf#view=FitH" class="comic-download" aria-label="Download Issue_14.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 15</div>
+            <div class="comic-title">Turtleman The Neologist</div>
+            <div class="comic-meta"> Turtleman decides to chase Will down a rabbit hole of his own making.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_15.pdf#view=FitH" class="comic-download" aria-label="Download Issue_15.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 17</div>
+            <div class="comic-title">Turtleman The Neologist Volume 2</div>
+            <div class="comic-meta"> Turtleman continues to chase Will down a rabbit hole of his own making.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_17.pdf#view=FitH" class="comic-download" aria-label="Download Issue_17.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 18</div>
+            <div class="comic-title">Turtleman The Neologist Volume 3</div>
+            <div class="comic-meta"> Turtleman continues to chase Will down a rabbit hole of his own making.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_18.pdf#view=FitH" class="comic-download" aria-label="Download Issue_18.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 19</div>
+            <div class="comic-title">Turtleman The Neologist Volume 4</div>
+            <div class="comic-meta"> Turtleman continues to chase Will down a rabbit hole of his own making.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_19.pdf#view=FitH" class="comic-download" aria-label="Download Issue_19.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 21</div>
+            <div class="comic-title">Turtleman The Neologist Volume 5</div>
+            <div class="comic-meta"> Turtleman the Neologist strikes again - new words and new inventions designed to light up your day.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_21.pdf#view=FitH" class="comic-download" aria-label="Download Issue_21.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+          <article class="comic-card">
+            <div class="comic-tag">Issue 22</div>
+            <div class="comic-title">Turtleman The Neologist Volume 6</div>
+            <div class="comic-meta"> Turtleman the Neologist strikes again - new words and new inventions designed to light up your day.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_22.pdf#view=FitH" class="comic-download" aria-label="Download Issue_22.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+              
+          <article class="comic-card">
+            <div class="comic-tag">Issue 23</div>
+            <div class="comic-title">Turtleman ponders some truths and AI slop</div>
+            <div class="comic-meta"> Turtleman just makes up a bunch of rubbish for no good reason we can think of.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_23.pdf#view=FitH" class="comic-download" aria-label="Download Issue_23.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+        <article class="comic-card">
+            <div class="comic-tag">Issue 24</div>
+            <div class="comic-title">Turtleman and the Chicken Zombie Apocalypse</div>
+            <div class="comic-meta"> Turtleman fights for justice and freedom in the era of killer viruses.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_24.pdf#view=FitH" class="comic-download" aria-label="Download Issue_24.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+        <article class="comic-card">
+            <div class="comic-tag">Issue 25</div>
+            <div class="comic-title">Turtleman and the Coming 2.0</div>
+            <div class="comic-meta"> Turtleman does what we all know you shouldn't - mix politics, religion and AI.</div>
+            <div class="comic-footer">
+              <div class="comic-size">PDF · A4</div>
+              <a href="Issue_25.pdf#view=FitH" class="comic-download" aria-label="Download Issue_25.pdf Turtleman comic PDF by Ian Maxwell">Download</a>
+            </div>
+          </article>
+
+
+        </div>
+        </details>
+      </section>
+      <section class="contact-section">
+        <div class="section-title">Contact &amp; Feedback</div>
+        <div class="contact-fields">
+          <input type="text" id="contact-name" placeholder="Name" />
+          <input type="email" id="contact-email" placeholder="Email (optional)" />
+        </div>
+        <textarea class="contact-textarea" id="contact-msg" placeholder="Your message..."></textarea>
+        <button class="contact-send" onclick="sendFeedback()">Send</button>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function sendFeedback() {
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const msg = document.getElementById('contact-msg').value.trim();
+      if (!msg) return;
+      const from = name ? (email ? name + ' <' + email + '>' : name) : (email || 'Anonymous');
+      const subject = encodeURIComponent('Turtleman feedback from ' + (name || 'a reader'));
+      const body = encodeURIComponent((from ? 'From: ' + from + '\n\n' : '') + msg);
+      window.location.href = 'mailto:maxwell@gmail.com?subject=' + subject + '&body=' + body;
+    }
+  </script>
+
+  <footer>
+    © MXX1 Holdings Pty Ltd 2026
+  </footer>
+</body>
+</html>
+
+
